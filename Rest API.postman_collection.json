@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "a31d2b69-733f-45ab-a5fe-8dd12695e8cf",
+		"name": "Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24103010"
+	},
+	"item": [
+		{
+			"name": "Task Categories",
+			"item": [
+				{
+					"name": "http://localhost/API/index.php/management/",
+					"protocolProfileBehavior": {
+						"followOriginalHttpMethod": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "method",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost/API/index.php/management",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"management"
+							]
+						},
+						"description": "List All Data User"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/API/index.php/management?id=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/API/index.php/management?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"management"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Show Data User By ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/API/index.php/management",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"name\": \"Ahmad Muzakki\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/API/index.php/management",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"management"
+							]
+						},
+						"description": "Create Data"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/API/index.php/management?id=1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Bayu K.H\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/API/index.php/management?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"management"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Edit Data By ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/API/index.php/management",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/API/index.php/management",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"management"
+							]
+						},
+						"description": "Delete Data By ID"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "http://localhost/API/index.php/tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/API/index.php/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"tasks"
+							]
+						},
+						"description": "List All data By ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/API/index.php/tasks?id=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/API/index.php/tasks?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Show data By ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/API/index.php/tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"category_id\": 2,\r\n        \"title\": \"Yudha Ardi\",\r\n        \"description\": \"Tes Document\",\r\n        \"start_date\": \"2022-01-01\",\r\n        \"finish_date\": \"2022-02-02\",\r\n        \"status\": \"New\",\r\n        \"doc_url\": \"http://google.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/API/index.php/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"tasks"
+							]
+						},
+						"description": "Create Data"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/API/index.php/tasks?id=2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"category_id\": 2,\r\n    \"title\": \"Yudha Ardi Firmasah\",\r\n    \"description\": \"Tes Document\",\r\n    \"start_date\": \"2022-01-01\",\r\n    \"finish_date\": \"2022-02-02\",\r\n    \"status\": \"New\",\r\n    \"doc_url\": \"http://google.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/API/index.php/tasks?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						},
+						"description": "Edit Data By ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost/API/index.php/tasks",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/API/index.php/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"API",
+								"index.php",
+								"tasks"
+							]
+						},
+						"description": "Delete Data By ID"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

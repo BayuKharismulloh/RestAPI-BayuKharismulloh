@@ -1,0 +1,295 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Rest API
+  contact: {}
+host: localhost
+basePath: /API/index.php
+securityDefinitions: {}
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /management:
+    get:
+      description: List All Data User
+      summary: http://localhost/API/index.php/management/
+      tags:
+      - Task Categories
+      operationId: http://localhost/API/index.php/management/
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    post:
+      description: Create Data
+      summary: http://localhost/API/index.php/management
+      tags:
+      - Task Categories
+      operationId: http://localhost/API/index.php/management
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/http%3A~1~1localhost~1API~1index.php~1managementRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    put:
+      description: Edit Data By ID
+      summary: http://localhost/API/index.php/management?id=1
+      tags:
+      - Task Categories
+      operationId: Puthttp://localhost/API/index.php/management?id=1
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: query
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/http%3A~1~1localhost~1API~1index.php~1management%3Fid%3D1Request'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    delete:
+      description: Delete Data By ID
+      summary: http://localhost/API/index.php/management
+      tags:
+      - Task Categories
+      operationId: Deletehttp://localhost/API/index.php/management
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /tasks:
+    get:
+      description: List All data By ID
+      summary: http://localhost/API/index.php/tasks
+      tags:
+      - Tasks
+      operationId: http://localhost/API/index.php/tasks
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    post:
+      description: Create Data
+      summary: http://localhost/API/index.php/tasks
+      tags:
+      - Tasks
+      operationId: Posthttp://localhost/API/index.php/tasks
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/http%3A~1~1localhost~1API~1index.php~1tasksRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    put:
+      description: Edit Data By ID
+      summary: http://localhost/API/index.php/tasks?id=2
+      tags:
+      - Tasks
+      operationId: http://localhost/API/index.php/tasks?id=2
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: query
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/http%3A~1~1localhost~1API~1index.php~1tasks%3Fid%3D2Request'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    delete:
+      description: Delete Data By ID
+      summary: http://localhost/API/index.php/tasks
+      tags:
+      - Tasks
+      operationId: Deletehttp://localhost/API/index.php/tasks
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/x-www-form-urlencoded
+      parameters:
+      - name: id
+        in: formData
+        required: true
+        type: integer
+        format: int32
+        description: ''
+      responses:
+        '200':
+          description: ''
+          headers: {}
+definitions:
+  http://localhost/API/index.php/managementRequest:
+    title: http://localhost/API/index.php/managementRequest
+    example:
+      id: 6
+      name: Ahmad Muzakki
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      name:
+        type: string
+    required:
+    - id
+    - name
+  http://localhost/API/index.php/management?id=1Request:
+    title: http://localhost/API/index.php/management?id=1Request
+    example:
+      id: 1
+      name: Bayu K.H
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      name:
+        type: string
+    required:
+    - id
+    - name
+  http://localhost/API/index.php/tasksRequest:
+    title: http://localhost/API/index.php/tasksRequest
+    example:
+      id: 2
+      category_id: 2
+      title: Yudha Ardi
+      description: Tes Document
+      start_date: 2022-01-01
+      finish_date: 2022-02-02
+      status: New
+      doc_url: http://google.com
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      category_id:
+        type: integer
+        format: int32
+      title:
+        type: string
+      description:
+        type: string
+      start_date:
+        type: string
+      finish_date:
+        type: string
+      status:
+        type: string
+      doc_url:
+        type: string
+    required:
+    - id
+    - category_id
+    - title
+    - description
+    - start_date
+    - finish_date
+    - status
+    - doc_url
+  http://localhost/API/index.php/tasks?id=2Request:
+    title: http://localhost/API/index.php/tasks?id=2Request
+    example:
+      id: 2
+      category_id: 2
+      title: Yudha Ardi Firmasah
+      description: Tes Document
+      start_date: 2022-01-01
+      finish_date: 2022-02-02
+      status: New
+      doc_url: http://google.com
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      category_id:
+        type: integer
+        format: int32
+      title:
+        type: string
+      description:
+        type: string
+      start_date:
+        type: string
+      finish_date:
+        type: string
+      status:
+        type: string
+      doc_url:
+        type: string
+    required:
+    - id
+    - category_id
+    - title
+    - description
+    - start_date
+    - finish_date
+    - status
+    - doc_url
+tags:
+- name: Task Categories
+- name: Tasks
